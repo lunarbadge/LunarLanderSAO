@@ -1,6 +1,6 @@
 # LunarLanderSAO
 
-A SAO for the Lunar Lander badge
+A SAO for the Lunar Lander badge (or other badges supporting the 1.69bis SAO standard).
 
 The schematic is [here](/schematic.pdf "here").
 
@@ -20,3 +20,10 @@ The SAO connector is a keyed connector that provides power for the badge.  Some 
 The connector is simple through-hole soldering.
 
 ![Connector](/images/connectorAttached.jpg "connector attached")
+
+## Hacking the SAO
+
+The SAO only uses power and ground connections from the badge.  The red arrow indicates the power connection; the yellow is ground.  If you want to use a different way of powering the SAO, these are the wires you need.  The SAO needs 3.3V, and could be powered by a 3V coin cell battery if you want.
+
+We programmed the SAO's attiny85 using a 8 pin SOIC clip with a TinyUSB programmer, and Arduino IDE. You'll need to download the attiny85 driver for Arduino because it is not included.
+
